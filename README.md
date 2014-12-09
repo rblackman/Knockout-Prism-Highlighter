@@ -19,7 +19,18 @@ Usage
 
 ###Example
 
+Highlight a block of code:
 ```html
-<pre><code data-bind="highlight: myCode, language: 'language-markup'"></code></pre>
+<pre><code data-bind="highlight: foo, language: 'language-markup'"></code></pre>
 ```
 
+Highlight code inline:
+```html
+<p>Lorem ipsum <code data-bind="highlight: foo, 'language-css'"></code>dolor sit</p>
+```
+
+You can use this binding trigger prism syntax highlighting for static content. This is questionably useful since Prism does this automatically. However, if you want to specify a language this way for consistancy it is available.
+
+```html
+<pre><code data-bind="highlight, language: 'language-markup'">foo</code></pre>
+```
