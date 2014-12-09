@@ -20,8 +20,14 @@ ko.bindingHandlers.highlight = {
 
 	},
 	update: function (element, valueAccessor) {
-		element.innerHTML = ko.unwrap(valueAccessor());
-		window.Prism.highlightElement(element); // make prisim highlight the code again
+
+		var value = ko.unwrap(valueAccessor());
+
+		if (value !== undefined) { // allows highlighting static code
+			element.innerHTML = value;
+		}
+
+		window.Prism.highlightElement(element);
 	}
 
 };
