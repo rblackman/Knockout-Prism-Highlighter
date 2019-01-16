@@ -12,12 +12,12 @@ Dependencies
 Usage
 -----
 
-###Parameters
+### Parameters
 
 * *highlight* (required) - The code to highlight
 * *language* - The language to use for syntax highlighting
 
-###Example
+### Example
 
 Highlight a block of code:
 ```html
